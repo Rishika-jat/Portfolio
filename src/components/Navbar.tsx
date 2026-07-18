@@ -12,7 +12,12 @@ const navItems = [
   { name: 'Contact', href: '#contact' },
 ];
 
-export default function Navbar() {
+interface NavbarProps {
+  currentView?: 'home' | 'all-projects';
+  onViewChange?: (view: 'home' | 'all-projects') => void;
+}
+
+export default function Navbar({ currentView, onViewChange }: NavbarProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   
@@ -43,6 +48,13 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
           <motion.a 
             href="#"
+            onClick={(e) => {
+              if (currentView !== 'home') {
+                e.preventDefault();
+                onViewChange?.('home');
+                window.scrollTo({ top: 0, behavior: 'instant' });
+              }
+            }}
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             className="text-2xl font-display font-bold tracking-tighter flex items-center gap-2 group"
@@ -59,6 +71,11 @@ export default function Navbar() {
               <motion.a
                 key={item.name}
                 href={item.href}
+                onClick={() => {
+                  if (currentView !== 'home') {
+                    onViewChange?.('home');
+                  }
+                }}
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.1 }}
@@ -98,7 +115,12 @@ export default function Navbar() {
               <a 
                 key={item.name} 
                 href={item.href} 
-                onClick={() => setIsOpen(false)}
+                onClick={() => {
+                  setIsOpen(false);
+                  if (currentView !== 'home') {
+                    onViewChange?.('home');
+                  }
+                }}
                 className="text-lg font-medium text-white/80 hover:text-white"
               >
                 {item.name}

@@ -1,7 +1,13 @@
 import { motion } from 'motion/react';
-import { Cpu, Database, Layout, Terminal, Code2, Globe } from 'lucide-react';
+import { Cpu, Database, Layout, Terminal, Code2 } from 'lucide-react';
 
 const skillCategories = [
+  {
+    title: 'Core Web',
+    icon: Code2,
+    skills: ['HTML5', 'CSS3', 'JavaScript (ES6)'],
+    color: 'from-yellow-500 to-amber-500'
+  },
   {
     title: 'Frontend',
     icon: Layout,
@@ -11,7 +17,7 @@ const skillCategories = [
   {
     title: 'Backend',
     icon: Terminal,
-    skills: ['NodeJS', 'ExpressJS', 'NestJS', 'Java', 'Python'],
+    skills: ['NodeJS', 'ExpressJS', 'NestJS', 'Java'],
     color: 'from-green-500 to-emerald-500'
   },
   {
@@ -23,7 +29,7 @@ const skillCategories = [
   {
     title: 'AI & Tools',
     icon: Cpu,
-    skills: ['Gemini API', 'Claude', 'Docker', 'Git', 'CI/CD'],
+    skills: ['Gemini API', 'Claude', 'Cursor', 'Docker', 'Git', 'CI/CD'],
     color: 'from-orange-500 to-red-500'
   }
 ];
@@ -42,7 +48,7 @@ export default function Skills() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
           {skillCategories.map((category, idx) => (
             <motion.div
               key={category.title}

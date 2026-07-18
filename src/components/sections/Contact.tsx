@@ -93,7 +93,7 @@ export default function Contact() {
                     </div>
                     <div>
                         <p className="text-xs text-white/40 uppercase tracking-widest font-medium">Location</p>
-                        <p className="text-lg font-medium">Indore, India</p>
+                        <p className="text-lg font-medium">Noida, India</p>
                     </div>
                  </div>
               </div>

@@ -4,8 +4,17 @@ import { Calendar, Building2 } from 'lucide-react';
 const experiences = [
   {
     company: 'Naikroop Solutions',
+    role: 'Software Engineer',
+    period: 'July 2026 - Present',
+    description: [
+      'Led UAT activities, identified and resolved issues, and prepared the Product for production release.',
+      'Implemented and optimized multi-user functionality, ensuring scalability, reliability, and smooth user experience.'
+    ]
+  },
+  {
+    company: 'Naikroop Solutions',
     role: 'Associate Software Engineer',
-    period: 'Aug 2025 - Present',
+    period: 'Aug 2025 - June 2026',
     description: [
       'Created a Backend Flow Designer in NaikFlow which enables users to create backend services through a drag-and-drop interface.',
       'Conducted multiple successful MVP demos for premier enterprise clients and assisted in onboarding them.',

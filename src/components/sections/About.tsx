@@ -22,12 +22,12 @@ export default function About() {
             
             <p className="text-white/60 leading-relaxed text-lg font-light">
               I am a result-oriented software developer with a passion for optimizing project outcomes and driving engineering excellence. 
-              Based in Indore, India, I scale applications using modern tech stacks and integrate AI agents to solve complex problems.
+              Based in Noida, India, I scale applications using modern tech stacks and integrate AI agents to solve complex problems.
             </p>
 
             <div className="grid grid-cols-2 gap-6">
               {[
-                { label: 'Indore, India', icon: MapPin },
+                { label: 'Noida, India', icon: MapPin },
                 { label: 'BCA (2023-26)', icon: GraduationCap },
                 { label: 'Software Engineer | fullstack Developer', icon: User },
                 { label: 'Working at Naikroop', icon: Briefcase },
@@ -62,7 +62,7 @@ export default function About() {
                   <span className="text-xs uppercase tracking-widest text-white/40">Current Status</span>
                   <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
                 </div>
-                <p className="text-sm font-medium">Developing low-code backend flow designers at Naikroop Solutions.</p>
+                <p className="text-sm font-medium">Developing no-code platform at Naikroop Solutions, delivered multiple client projects, and open for other roles.</p>
               </div>
             </div>
             {/* Background elements */}
