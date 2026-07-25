@@ -5,6 +5,7 @@ import apexBillingImg from '../assets/images/apex_billing_1780161647339.png';
 import ledgerSphereImg from '../assets/images/ledgersphere_dashboard_1780161664365.png';
 import kutumbhSakhiImg from '../assets/images/kutumbh_sakhi_1784355946081.jpg';
 import preciousGingersnapImg from '../assets/images/precious_gingersnap_1784355963637.jpg';
+import sonyHeadphoneImg from '../assets/images/sony_3d_headphone_1784983118387.jpg';
 
 export interface Project {
   title: string;
@@ -69,6 +70,13 @@ export const projects: Project[] = [
     image: preciousGingersnapImg,
     tags: ['ReactJS', 'Framer Motion', 'TailwindCSS', 'Interactive'],
     live: 'https://precious-gingersnap-de1ef6.netlify.app/'
+  },
+  {
+    title: 'Sony WH-1000XM6 - 3D Experience',
+    desc: 'A futuristic 3D animated product showcase for the Sony WH-1000XM6 flagship headphones with immersive dark theme visuals, interactive sound optics, and interactive hardware specifications.',
+    image: sonyHeadphoneImg,
+    tags: ['ReactJS', '3D Animation', 'Framer Motion', 'TailwindCSS'],
+    live: 'https://3d-headphone-animated.netlify.app/'
   },
   {
     title: 'E-Commerce Website',
