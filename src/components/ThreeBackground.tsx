@@ -7,35 +7,42 @@ export default function ThreeBackground() {
   useEffect(() => {
     if (!containerRef.current) return;
 
+    let isRunning = true;
+    let animationFrameId: number;
+
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-    const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+    const renderer = new THREE.WebGLRenderer({ 
+      alpha: true, 
+      antialias: false, // Turn off heavy antialias on particle background for high FPS
+      powerPreference: 'high-performance'
+    });
     
     renderer.setSize(window.innerWidth, window.innerHeight);
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
     containerRef.current.appendChild(renderer.domElement);
 
-    // Particles
+    // Optimized particle system (2000 points is very light on GPU while looking rich)
+    const count = 2000;
     const particlesGeometry = new THREE.BufferGeometry();
-    const count = 3000;
     const positions = new Float32Array(count * 3);
     const colors = new Float32Array(count * 3);
 
     for (let i = 0; i < count * 3; i++) {
-        positions[i] = (Math.random() - 0.5) * 15;
-        colors[i] = Math.random();
+      positions[i] = (Math.random() - 0.5) * 15;
+      colors[i] = Math.random();
     }
 
     particlesGeometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
     particlesGeometry.setAttribute('color', new THREE.BufferAttribute(colors, 3));
 
     const particlesMaterial = new THREE.PointsMaterial({
-        size: 0.015,
-        sizeAttenuation: true,
-        transparent: true,
-        alphaTest: 0.001,
-        blending: THREE.AdditiveBlending,
-        vertexColors: true,
+      size: 0.015,
+      sizeAttenuation: true,
+      transparent: true,
+      alphaTest: 0.001,
+      blending: THREE.AdditiveBlending,
+      vertexColors: true,
     });
 
     const particles = new THREE.Points(particlesGeometry, particlesMaterial);
@@ -47,41 +54,63 @@ export default function ThreeBackground() {
     let mouseY = 0;
 
     const handleMouseMove = (event: MouseEvent) => {
-        mouseX = (event.clientX / window.innerWidth - 0.5) * 0.5;
-        mouseY = (event.clientY / window.innerHeight - 0.5) * 0.5;
+      mouseX = (event.clientX / window.innerWidth - 0.5) * 0.4;
+      mouseY = (event.clientY / window.innerHeight - 0.5) * 0.4;
     };
 
-    window.addEventListener('mousemove', handleMouseMove);
+    window.addEventListener('mousemove', handleMouseMove, { passive: true });
 
     const animate = () => {
-        requestAnimationFrame(animate);
-        
-        particles.rotation.y += 0.001;
-        particles.rotation.x += 0.0005;
+      if (!isRunning) return;
+      
+      animationFrameId = requestAnimationFrame(animate);
+      
+      particles.rotation.y += 0.0008;
+      particles.rotation.x += 0.0004;
 
-        // Smooth follow mouse
-        particles.position.x += (mouseX - particles.position.x) * 0.05;
-        particles.position.y += (-mouseY - particles.position.y) * 0.05;
+      // Smooth follow mouse
+      particles.position.x += (mouseX - particles.position.x) * 0.03;
+      particles.position.y += (-mouseY - particles.position.y) * 0.03;
 
-        renderer.render(scene, camera);
+      renderer.render(scene, camera);
     };
 
     animate();
 
-    const handleResize = () => {
-        camera.aspect = window.innerWidth / window.innerHeight;
-        camera.updateProjectionMatrix();
-        renderer.setSize(window.innerWidth, window.innerHeight);
+    const handleVisibilityChange = () => {
+      if (document.hidden) {
+        cancelAnimationFrame(animationFrameId);
+      } else if (isRunning) {
+        animate();
+      }
     };
 
-    window.addEventListener('resize', handleResize);
+    const handleResize = () => {
+      camera.aspect = window.innerWidth / window.innerHeight;
+      camera.updateProjectionMatrix();
+      renderer.setSize(window.innerWidth, window.innerHeight);
+    };
+
+    window.addEventListener('resize', handleResize, { passive: true });
+    document.addEventListener('visibilitychange', handleVisibilityChange);
 
     return () => {
-        window.removeEventListener('mousemove', handleMouseMove);
-        window.removeEventListener('resize', handleResize);
-        containerRef.current?.removeChild(renderer.domElement);
+      isRunning = false;
+      cancelAnimationFrame(animationFrameId);
+      window.removeEventListener('mousemove', handleMouseMove);
+      window.removeEventListener('resize', handleResize);
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
+      
+      particlesGeometry.dispose();
+      particlesMaterial.dispose();
+      scene.remove(particles);
+      renderer.dispose();
+
+      if (containerRef.current && renderer.domElement.parentNode === containerRef.current) {
+        containerRef.current.removeChild(renderer.domElement);
+      }
     };
   }, []);
 
-  return <div ref={containerRef} className="fixed inset-0 -z-10 bg-[#020205]" />;
+  return <div ref={containerRef} className="fixed inset-0 -z-10 bg-[#020205] pointer-events-none" />;
 }

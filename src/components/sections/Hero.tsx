@@ -69,9 +69,13 @@ export default function Hero() {
             View Projects
             <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
           </a>
-          <button className="w-full sm:w-auto px-8 py-4 glass text-white font-bold rounded-xl flex items-center justify-center gap-2 hover:bg-white/10 transition-colors">
+          <a 
+            href="#contact" 
+            id="hero-contact-btn"
+            className="w-full sm:w-auto px-8 py-4 glass text-white font-bold rounded-xl flex items-center justify-center gap-2 hover:bg-white/10 transition-colors"
+          >
             Contact Me
-          </button>
+          </a>
         </motion.div>
 
         {/* Floating Icons Decore */}

@@ -2,5 +2,5 @@
   "name": "Rishika Jat | Software Engineer | fullstack Developer Portfolio",
   "description": "A premium, futuristic developer portfolio showcasing full-stack expertise, AI integrations, and modern web applications.",
   "requestFramePermissions": [],
-  "majorCapabilities": []
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }
