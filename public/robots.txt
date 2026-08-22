@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://rishika-jat-portfolio-website.vercel.app/sitemap.xml
