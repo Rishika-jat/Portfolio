@@ -69,47 +69,47 @@ export default function Contact() {
           >
             <div className="space-y-4">
               <h2 className="text-sm font-mono text-primary uppercase tracking-[0.3em]">05. Connection</h2>
-              <h3 className="text-5xl md:text-6xl font-display font-bold">Let's build <br />the <span className="text-gradient">next big thing</span></h3>
+              <h3 className="text-5xl md:text-6xl font-display font-bold text-slate-900 dark:text-white">Let's build <br />the <span className="text-gradient">next big thing</span></h3>
             </div>
 
             <div className="space-y-8">
-              <p className="text-white/60 text-lg font-light leading-relaxed">
+              <p className="text-slate-600 dark:text-white/60 text-lg font-light leading-relaxed">
                 I'm currently looking for new opportunities and collaborations. If you have a question or just want to say hi, I'll try my best to get back to you!
               </p>
 
               <div className="space-y-6">
                  <a href="mailto:rishikajat03@gmail.com" className="flex items-center gap-4 group">
-                    <div className="w-12 h-12 rounded-xl glass flex items-center justify-center group-hover:bg-primary group-hover:scale-110 transition-all">
-                        <Mail className="group-hover:text-white" />
+                    <div className="w-12 h-12 rounded-xl glass border-slate-200 dark:border-white/10 flex items-center justify-center group-hover:bg-primary group-hover:scale-110 transition-all">
+                        <Mail className="text-primary group-hover:text-white transition-colors" />
                     </div>
                     <div>
-                        <p className="text-xs text-white/40 uppercase tracking-widest font-medium">Email Me</p>
-                        <p className="text-lg font-medium group-hover:text-primary transition-colors">rishikajat03@gmail.com</p>
+                        <p className="text-xs text-slate-500 dark:text-white/40 uppercase tracking-widest font-medium">Email Me</p>
+                        <p className="text-lg font-medium text-slate-900 dark:text-white group-hover:text-primary transition-colors">rishikajat03@gmail.com</p>
                     </div>
                  </a>
                  <div className="flex items-center gap-4 group">
-                    <div className="w-12 h-12 rounded-xl glass flex items-center justify-center">
-                        <MapPin className="text-white/60" />
+                    <div className="w-12 h-12 rounded-xl glass border-slate-200 dark:border-white/10 flex items-center justify-center">
+                        <MapPin className="text-slate-600 dark:text-white/60" />
                     </div>
                     <div>
-                        <p className="text-xs text-white/40 uppercase tracking-widest font-medium">Location</p>
-                        <p className="text-lg font-medium">Noida, India</p>
+                        <p className="text-xs text-slate-500 dark:text-white/40 uppercase tracking-widest font-medium">Location</p>
+                        <p className="text-lg font-medium text-slate-900 dark:text-white">Noida, India</p>
                     </div>
                  </div>
               </div>
 
               <div className="flex gap-4">
                 {[
-                    { icon: Github, href: 'https://github.com/Rishika-jat' },
-                    { icon: Linkedin, href: 'https://linkedin.com/in/rishika-jat' },
-                    { icon: Twitter, href: '#' }
+                    { icon: Github, href: 'https://github.com/Rishika-jat', label: 'GitHub' },
+                    { icon: Linkedin, href: 'https://www.linkedin.com/in/rishika-jat-981144290', label: 'LinkedIn' },
                 ].map((social, i) => (
                     <a 
                         key={i} 
                         href={social.href}
                         target="_blank"
                         rel="noreferrer"
-                        className="w-12 h-12 rounded-xl glass flex items-center justify-center hover:bg-primary transition-all hover:-translate-y-1"
+                        title={social.label}
+                        className="w-12 h-12 rounded-xl glass border-slate-200 dark:border-white/10 text-slate-700 dark:text-white flex items-center justify-center hover:bg-primary hover:text-white transition-all hover:-translate-y-1 shadow-sm"
                     >
                         <social.icon size={20} />
                     </a>
@@ -122,54 +122,54 @@ export default function Contact() {
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="glass p-8 md:p-12 rounded-3xl space-y-8"
+            className="glass border-slate-200 dark:border-white/10 p-8 md:p-12 rounded-3xl space-y-8 shadow-lg dark:shadow-none"
           >
             <form className="space-y-6" onSubmit={handleSubmit}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
-                  <label className="text-xs font-mono uppercase tracking-[0.2em] text-white/40">Full Name</label>
+                  <label className="text-xs font-mono uppercase tracking-[0.2em] text-slate-500 dark:text-white/40">Full Name</label>
                   <input 
                     type="text" 
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
-                    className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 outline-none focus:border-primary transition-colors font-sans text-sm" 
+                    className="w-full bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-xl px-4 py-3 outline-none focus:border-primary text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-white/30 transition-colors font-sans text-sm" 
                     placeholder="John Doe" 
                     required
                   />
                 </div>
                 <div className="space-y-2">
-                  <label className="text-xs font-mono uppercase tracking-[0.2em] text-white/40">Email Address</label>
+                  <label className="text-xs font-mono uppercase tracking-[0.2em] text-slate-500 dark:text-white/40">Email Address</label>
                   <input 
                     type="email" 
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 outline-none focus:border-primary transition-colors font-sans text-sm" 
+                    className="w-full bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-xl px-4 py-3 outline-none focus:border-primary text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-white/30 transition-colors font-sans text-sm" 
                     placeholder="john@example.com" 
                     required
                   />
                 </div>
               </div>
               <div className="space-y-2">
-                <label className="text-xs font-mono uppercase tracking-[0.2em] text-white/40">Subject</label>
+                <label className="text-xs font-mono uppercase tracking-[0.2em] text-slate-500 dark:text-white/40">Subject</label>
                 <input 
                   type="text" 
                   name="subject"
                   value={formData.subject}
                   onChange={handleChange}
-                  className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 outline-none focus:border-primary transition-colors font-sans text-sm" 
+                  className="w-full bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-xl px-4 py-3 outline-none focus:border-primary text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-white/30 transition-colors font-sans text-sm" 
                   placeholder="Project Discovery" 
                   required
                 />
               </div>
               <div className="space-y-2">
-                <label className="text-xs font-mono uppercase tracking-[0.2em] text-white/40">Message</label>
+                <label className="text-xs font-mono uppercase tracking-[0.2em] text-slate-500 dark:text-white/40">Message</label>
                 <textarea 
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
-                  className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 outline-none focus:border-primary transition-colors font-sans text-sm min-h-[150px] resize-none" 
+                  className="w-full bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-xl px-4 py-3 outline-none focus:border-primary text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-white/30 transition-colors font-sans text-sm min-h-[150px] resize-none" 
                   placeholder="Let's build something awesome..." 
                   required
                 />
@@ -177,7 +177,7 @@ export default function Contact() {
 
               {statusMsg && (
                 <div className={`p-4 rounded-xl flex items-start gap-3 text-sm ${
-                  status === 'success' ? 'bg-green-500/10 text-green-400 border border-green-500/20' : 'bg-red-500/10 text-red-400 border border-red-500/20'
+                  status === 'success' ? 'bg-green-500/10 text-green-600 dark:text-green-400 border border-green-500/20' : 'bg-red-500/10 text-red-600 dark:text-red-400 border border-red-500/20'
                 }`}>
                   {status === 'success' ? <CheckCircle2 className="shrink-0 mt-0.5" size={16} /> : <AlertCircle className="shrink-0 mt-0.5" size={16} />}
                   <span>{statusMsg}</span>
@@ -187,7 +187,7 @@ export default function Contact() {
               <button 
                 type="submit"
                 disabled={status === 'submitting'}
-                className="w-full py-4 bg-primary text-white font-bold rounded-xl flex items-center justify-center gap-3 hover:bg-primary/90 transition-all hover:scale-[1.02] disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full py-4 bg-primary text-white font-bold rounded-xl flex items-center justify-center gap-3 hover:bg-primary/90 transition-all hover:scale-[1.02] disabled:opacity-50 disabled:cursor-not-allowed shadow-md cursor-pointer"
               >
                 {status === 'submitting' ? 'Delivering...' : 'Send Message'}
                 <Send size={18} />
@@ -196,8 +196,8 @@ export default function Contact() {
           </motion.div>
         </div>
 
-        <footer className="mt-24 pt-12 border-t border-white/5 text-center">
-            <p className="text-white/30 text-xs font-mono uppercase tracking-[0.3em]">
+        <footer className="mt-24 pt-12 border-t border-slate-200 dark:border-white/5 text-center">
+            <p className="text-slate-400 dark:text-white/30 text-xs font-mono uppercase tracking-[0.3em]">
                 &copy; {new Date().getFullYear()} Rishika Jat. All rights reserved.
             </p>
         </footer>

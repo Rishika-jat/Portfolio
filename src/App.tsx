@@ -5,6 +5,7 @@
 
 import { useState } from 'react';
 import { AnimatePresence } from 'motion/react';
+import { ThemeProvider } from './context/ThemeContext';
 import ThreeBackground from './components/ThreeBackground';
 import Cursor from './components/Cursor';
 import Navbar from './components/Navbar';
@@ -17,7 +18,7 @@ import AllProjects from './components/sections/AllProjects';
 import Contact from './components/sections/Contact';
 import LoadingScreen from './components/LoadingScreen';
 
-export default function App() {
+function MainApp() {
   const [view, setView] = useState<'home' | 'all-projects'>('home');
 
   const handleViewChange = (newView: 'home' | 'all-projects') => {
@@ -26,7 +27,7 @@ export default function App() {
   };
 
   return (
-    <div className="relative min-h-screen text-white selection:bg-primary/30">
+    <div className="relative min-h-screen text-slate-900 dark:text-white selection:bg-primary/30 selection:text-white transition-colors duration-300">
       <AnimatePresence>
         <LoadingScreen />
       </AnimatePresence>
@@ -51,18 +52,26 @@ export default function App() {
       </main>
 
       <div className="fixed bottom-10 left-10 z-[1000] hidden lg:flex flex-col gap-6 items-center">
-        <div className="w-px h-24 bg-white/10" />
-        <p className="text-[10px] font-mono uppercase tracking-[0.4em] rotate-180 [writing-mode:vertical-lr] text-white/20">
+        <div className="w-px h-24 bg-slate-300 dark:bg-white/10 transition-colors" />
+        <p className="text-[10px] font-mono uppercase tracking-[0.4em] rotate-180 [writing-mode:vertical-lr] text-slate-400 dark:text-white/20 transition-colors">
           Scroll to explore
         </p>
       </div>
 
       <div className="fixed bottom-10 right-10 z-[1000] hidden lg:flex flex-col gap-6 items-center">
-        <p className="text-[10px] font-mono uppercase tracking-[0.4em] rotate-180 [writing-mode:vertical-lr] text-white/20">
+        <p className="text-[10px] font-mono uppercase tracking-[0.4em] rotate-180 [writing-mode:vertical-lr] text-slate-400 dark:text-white/20 transition-colors">
           Rishika Jat &copy; 2026
         </p>
-        <div className="w-px h-24 bg-white/10" />
+        <div className="w-px h-24 bg-slate-300 dark:bg-white/10 transition-colors" />
       </div>
     </div>
+  );
+}
+
+export default function App() {
+  return (
+    <ThemeProvider>
+      <MainApp />
+    </ThemeProvider>
   );
 }

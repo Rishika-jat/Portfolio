@@ -40,7 +40,7 @@ export default function Hero() {
         </motion.div>
 
         <motion.h1 
-          className="text-5xl md:text-8xl font-display font-bold tracking-tight headline-animated opacity-0"
+          className="text-5xl md:text-8xl font-display font-bold tracking-tight headline-animated opacity-0 text-slate-900 dark:text-white"
         >
           Building the <span className="text-gradient">Future</span> <br />
           of Web & AI
@@ -50,10 +50,10 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.4 }}
-          className="max-w-2xl mx-auto text-lg md:text-xl text-white/60 font-light leading-relaxed"
+          className="max-w-2xl mx-auto text-lg md:text-xl text-slate-600 dark:text-white/60 font-light leading-relaxed"
         >
-          Hi, I'm <span className="text-white font-semibold">Rishika Jat</span>. 
-          A Software Engineer | fullstack Developer specializing in crafting high-performance web applications and AI-driven experiences.
+          Hi, I'm <span className="text-slate-900 dark:text-white font-semibold">Rishika Jat</span>. 
+          A Full-Stack Software Engineer specializing in building scalable web platforms, no-code/low-code tooling, and AI-driven applications.
         </motion.p>
 
         <motion.div 
@@ -64,7 +64,7 @@ export default function Hero() {
         >
           <a 
             href="#projects" 
-            className="w-full sm:w-auto px-8 py-4 bg-white text-black font-bold rounded-xl flex items-center justify-center gap-2 hover:bg-white/90 transition-colors group"
+            className="w-full sm:w-auto px-8 py-4 bg-slate-900 text-white hover:bg-slate-800 dark:bg-white dark:text-black dark:hover:bg-white/90 font-bold rounded-xl flex items-center justify-center gap-2 transition-colors group shadow-md"
           >
             View Projects
             <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
@@ -72,7 +72,7 @@ export default function Hero() {
           <a 
             href="#contact" 
             id="hero-contact-btn"
-            className="w-full sm:w-auto px-8 py-4 glass text-white font-bold rounded-xl flex items-center justify-center gap-2 hover:bg-white/10 transition-colors"
+            className="w-full sm:w-auto px-8 py-4 glass text-slate-800 dark:text-white font-bold rounded-xl flex items-center justify-center gap-2 hover:bg-slate-100 dark:hover:bg-white/10 transition-colors border-slate-200 dark:border-white/10"
           >
             Contact Me
           </a>
@@ -84,7 +84,7 @@ export default function Hero() {
           transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
           className="absolute -bottom-20 left-1/2 -translate-x-1/2 opacity-20 pointer-events-none hidden md:block"
         >
-          <div className="flex gap-12 text-6xl font-display font-black text-white/5 whitespace-nowrap">
+          <div className="flex gap-12 text-6xl font-display font-black text-slate-300/40 dark:text-white/5 whitespace-nowrap">
             <span>REACT</span>
             <span>NEXTJS</span>
             <span>TYPESCRIPT</span>
@@ -100,7 +100,7 @@ export default function Hero() {
         transition={{ delay: 1.5 }}
         className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
       >
-        <span className="text-[10px] uppercase tracking-[0.2em] text-white/30">Scroll to explore</span>
+        <span className="text-[10px] uppercase tracking-[0.2em] text-slate-400 dark:text-white/30">Scroll to explore</span>
         <div className="w-px h-12 bg-gradient-to-b from-primary/50 to-transparent" />
       </motion.div>
     </section>

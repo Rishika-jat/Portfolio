@@ -15,28 +15,27 @@ export default function About() {
           >
             <div className="space-y-4">
               <h2 className="text-sm font-mono text-primary uppercase tracking-[0.3em]">01. About Me</h2>
-              <h3 className="text-4xl md:text-5xl font-display font-bold leading-tight">
+              <h3 className="text-4xl md:text-5xl font-display font-bold leading-tight text-slate-900 dark:text-white">
                 Crafting Digital Excellence Through <span className="text-gradient">Logic & Creativity</span>
               </h3>
             </div>
             
-            <p className="text-white/60 leading-relaxed text-lg font-light">
-              I am a result-oriented software developer with a passion for optimizing project outcomes and driving engineering excellence. 
-              Based in Noida, India, I scale applications using modern tech stacks and integrate AI agents to solve complex problems.
+            <p className="text-slate-600 dark:text-white/60 leading-relaxed text-lg font-light">
+              Full-Stack Software Engineer with nearly 2 years of experience building scalable web platforms and no-code/low-code tooling, alongside freelance project work. Proven track record delivering MVP demos to enterprise clients, driving successful onboarding, and improving development speed through AI-assisted engineering (Cursor, Claude).
             </p>
 
             <div className="grid grid-cols-2 gap-6">
               {[
                 { label: 'Noida, India', icon: MapPin },
-                { label: 'BCA (2023-26)', icon: GraduationCap },
-                { label: 'Software Engineer | fullstack Developer', icon: User },
-                { label: 'Working at Naikroop', icon: Briefcase },
+                { label: 'BCA (CGPA: 8.6, 2023-26)', icon: GraduationCap },
+                { label: 'Software Engineer', icon: User },
+                { label: 'Naikroop Solutions', icon: Briefcase },
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-4 group">
-                  <div className="w-10 h-10 rounded-lg glass flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                  <div className="w-10 h-10 rounded-lg glass flex items-center justify-center group-hover:bg-primary/20 transition-colors border-slate-200 dark:border-white/10">
                     <item.icon size={18} className="text-primary" />
                   </div>
-                  <span className="text-sm text-white/80">{item.label}</span>
+                  <span className="text-sm text-slate-700 dark:text-white/80 font-medium">{item.label}</span>
                 </div>
               ))}
             </div>
@@ -49,20 +48,20 @@ export default function About() {
             viewport={{ once: true }}
             className="relative"
           >
-            <div className="aspect-square rounded-2xl overflow-hidden glass relative z-10 group">
+            <div className="aspect-square rounded-2xl overflow-hidden glass relative z-10 group border-slate-200 dark:border-white/10">
               <img 
                 src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1000" 
                 alt="Developer Setup"
                 className="w-full h-full object-cover opacity-50 grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" 
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#020205] to-transparent opacity-60" />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 dark:from-[#020205] to-transparent opacity-60" />
               
-              <div className="absolute bottom-8 left-8 right-8 p-6 rounded-xl glass">
+              <div className="absolute bottom-8 left-8 right-8 p-6 rounded-xl glass border-slate-200 dark:border-white/10">
                 <div className="flex items-center justify-between mb-4">
-                  <span className="text-xs uppercase tracking-widest text-white/40">Current Status</span>
+                  <span className="text-xs uppercase tracking-widest text-slate-500 dark:text-white/40">Current Status</span>
                   <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
                 </div>
-                <p className="text-sm font-medium">Developing no-code platform at Naikroop Solutions, delivered multiple client projects, and open for other roles.</p>
+                <p className="text-sm font-medium text-slate-800 dark:text-white">Software Engineer at Naikroop Solutions — leading UAT releases, optimizing multi-user scalability (500+ users), and crafting modern web platforms.</p>
               </div>
             </div>
             {/* Background elements */}

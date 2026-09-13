@@ -15,7 +15,7 @@ export default function LoadingScreen() {
     <motion.div
       initial={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="fixed inset-0 z-[9999] bg-[#020205] flex flex-col items-center justify-center p-6"
+      className="fixed inset-0 z-[9999] bg-[#020205] dark:bg-[#020205] [html.light_&]:bg-[#f8fafc] text-slate-900 dark:text-white flex flex-col items-center justify-center p-6 transition-colors duration-300"
     >
       <div className="relative">
         <motion.div
@@ -39,7 +39,7 @@ export default function LoadingScreen() {
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.5 }}
-          className="text-[10px] font-mono text-white/30 uppercase tracking-[0.5em] leading-loose"
+          className="text-[10px] font-mono text-slate-400 dark:text-white/30 uppercase tracking-[0.5em] leading-loose"
         >
           Initializing Portfolio / System v4.0.2<br />
           Loading shaders & assets...<br />

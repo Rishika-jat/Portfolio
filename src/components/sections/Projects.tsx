@@ -20,8 +20,8 @@ export default function Projects({ onViewAll }: ProjectsProps) {
               <Layers size={14} />
               04. Portfolio
             </div>
-            <h3 className="text-4xl md:text-5xl font-display font-bold">Featured Projects</h3>
-            <p className="text-white/60 font-light max-w-xl text-base">
+            <h3 className="text-4xl md:text-5xl font-display font-bold text-slate-900 dark:text-white">Featured Projects</h3>
+            <p className="text-slate-600 dark:text-white/60 font-light max-w-xl text-base">
               Client-delivered platforms, AI-driven applications, 3D animated experiences, and responsive web products.
             </p>
           </div>
@@ -31,7 +31,7 @@ export default function Projects({ onViewAll }: ProjectsProps) {
               e.preventDefault();
               onViewAll();
             }} 
-            className="flex items-center gap-2 text-sm font-medium text-white/80 hover:text-white transition-colors group cursor-pointer bg-white/5 hover:bg-white/10 border border-white/10 outline-none py-3 px-5 rounded-xl glass"
+            className="flex items-center gap-2 text-sm font-medium text-slate-700 hover:text-slate-900 dark:text-white/80 dark:hover:text-white transition-colors group cursor-pointer bg-slate-100 hover:bg-slate-200/80 dark:bg-white/5 dark:hover:bg-white/10 border border-slate-200 dark:border-white/10 outline-none py-3 px-5 rounded-xl glass shadow-sm"
           >
             View All Projects
             <ExternalLink size={16} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform text-primary" />
@@ -46,17 +46,17 @@ export default function Projects({ onViewAll }: ProjectsProps) {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: idx * 0.08, duration: 0.4 }}
               viewport={{ once: true, margin: '-50px' }}
-              className="group relative rounded-2xl overflow-hidden glass border-white/5 hover:border-primary/30 transition-all duration-500 flex flex-col justify-between"
+              className="group relative rounded-2xl overflow-hidden glass border-slate-200/90 dark:border-white/5 hover:border-primary/40 transition-all duration-500 flex flex-col justify-between shadow-sm dark:shadow-none"
             >
               <div>
-                <div className="aspect-video overflow-hidden bg-black/40 relative">
+                <div className="aspect-video overflow-hidden bg-slate-200 dark:bg-black/40 relative">
                   <img 
                     src={project.image} 
                     alt={project.title}
                     loading="lazy"
                     decoding="async"
                     referrerPolicy="no-referrer"
-                    className="w-full h-full object-cover grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" 
+                    className="w-full h-full object-cover grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" 
                   />
                 </div>
 
@@ -70,8 +70,8 @@ export default function Projects({ onViewAll }: ProjectsProps) {
                   </div>
 
                   <div className="space-y-2">
-                    <h4 className="text-xl font-bold font-display group-hover:text-primary transition-colors">{project.title}</h4>
-                    <p className="text-white/60 text-sm font-light leading-relaxed line-clamp-3">
+                    <h4 className="text-xl font-bold font-display text-slate-900 dark:text-white group-hover:text-primary transition-colors">{project.title}</h4>
+                    <p className="text-slate-600 dark:text-white/60 text-sm font-light leading-relaxed line-clamp-3">
                       {project.desc}
                     </p>
                   </div>
@@ -79,13 +79,13 @@ export default function Projects({ onViewAll }: ProjectsProps) {
               </div>
 
               <div className="p-7 pt-0">
-                <div className="flex items-center gap-6 pt-4 border-t border-white/5">
+                <div className="flex items-center gap-6 pt-4 border-t border-slate-200/80 dark:border-white/5">
                   {project.github && (
                     <a 
                       href={project.github} 
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-sm font-medium text-white/50 hover:text-white transition-colors"
+                      className="flex items-center gap-2 text-sm font-medium text-slate-600 dark:text-white/50 hover:text-primary dark:hover:text-white transition-colors"
                     >
                       <Github size={16} />
                       Source
@@ -95,7 +95,7 @@ export default function Projects({ onViewAll }: ProjectsProps) {
                     href={project.live} 
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-sm font-medium text-white/50 hover:text-white transition-colors ml-auto"
+                    className="flex items-center gap-2 text-sm font-medium text-slate-600 dark:text-white/50 hover:text-primary dark:hover:text-white transition-colors ml-auto"
                   >
                     <ExternalLink size={16} />
                     Live Demo
@@ -104,7 +104,7 @@ export default function Projects({ onViewAll }: ProjectsProps) {
               </div>
 
               {/* Decorative element */}
-              <div className="absolute top-3 right-3 p-1.5 rounded-lg glass opacity-0 group-hover:opacity-100 transition-opacity">
+              <div className="absolute top-3 right-3 p-1.5 rounded-lg glass opacity-0 group-hover:opacity-100 transition-opacity border-slate-200 dark:border-white/10">
                 <Terminal size={14} className="text-primary" />
               </div>
             </motion.div>

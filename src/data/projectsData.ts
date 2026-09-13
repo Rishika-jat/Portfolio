@@ -1,3 +1,4 @@
+import aiRecipeMakerImg from '../assets/images/ai_recipe_maker_1788885690760.jpg';
 import craveChefImg from '../assets/images/crave_chef_1780161688501.png';
 import clinicoImg from '../assets/images/clinico_booking_1780161612983.png';
 import nexusErpImg from '../assets/images/nexus_erp_1780161632358.png';
@@ -21,24 +22,34 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    id: 'kutumbh-sakhi',
-    title: 'Kutumbh Sakhi',
-    desc: 'A premium, client-delivered Indian ethnic e-commerce platform and integrated real-time inventory management suite designed for authentic traditional handcrafts, organic products, and sales telemetry.',
-    image: kutumbhSakhiImg,
-    tags: ['ReactJS', 'TailwindCSS', 'Context API', 'Inventory Suite'],
-    live: 'https://kutumbsakhi.in/',
-    category: 'client',
+    id: 'ai-recipe-maker',
+    title: 'AI Recipe Recommendation System',
+    desc: 'An AI-powered web application that generates personalized recipe suggestions from user-provided ingredients, simplifying meal-planning decisions with curated YouTube cooking guides.',
+    image: aiRecipeMakerImg,
+    tags: ['ReactJS', 'AI Agent', 'TailwindCSS', 'YouTube API'],
+    live: 'https://ai-recipe-maker-0tc2.onrender.com/',
+    category: 'showcase',
     featured: true
   },
   {
     id: 'crave-chef-ai',
-    title: 'Crave Chef AI - Food Delivery',
-    desc: 'An AI-powered luxury food delivery application featuring custom dynamic meal plans, curated gourmet recipes, custom diet matrices, and interactive customer wishlist tracking.',
+    title: 'Crave — AI-Powered Food Delivery Platform',
+    desc: 'A full-stack food delivery application featuring an AI-powered meal planner, generating personalized recommendations, ingredient-customization, and streamlined ordering flows.',
     image: craveChefImg,
-    tags: ['ReactJS', 'AI Planner', 'TailwindCSS', 'Framer Motion', 'Redux'],
+    tags: ['ReactJS', 'AI Meal Planner', 'TailwindCSS', 'Redux', 'Full-Stack'],
     github: 'https://github.com/Rishika-jat/Food-Delivery',
     live: 'https://food-delivery-crave.netlify.app/',
     category: 'showcase',
+    featured: true
+  },
+  {
+    id: 'kutumbh-sakhi',
+    title: 'Kutumbh Sakhi — E-Commerce & Inventory Management',
+    desc: 'A full-stack e-commerce application with real-time inventory, product, cart, and order management, paired with an admin dashboard with automatic stock updates.',
+    image: kutumbhSakhiImg,
+    tags: ['ReactJS', 'TailwindCSS', 'Context API', 'Inventory Admin'],
+    live: 'https://kutumbsakhi.in/',
+    category: 'client',
     featured: true
   },
   {

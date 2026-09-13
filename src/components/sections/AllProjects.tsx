@@ -25,10 +25,10 @@ export default function AllProjects({ onBack }: AllProjectsProps) {
           </button>
           
           <div className="space-y-4">
-            <h1 className="text-4xl md:text-6xl font-display font-bold">
+            <h1 className="text-4xl md:text-6xl font-display font-bold text-slate-900 dark:text-white">
               Full Project <span className="text-gradient">Portfolio</span>
             </h1>
-            <p className="max-w-2xl text-white/60 font-light text-base md:text-lg">
+            <p className="max-w-2xl text-slate-600 dark:text-white/60 font-light text-base md:text-lg">
               A comprehensive showcase of my developer journey, spanning client platforms, AI applications, interactive 3D designs, and full-stack systems.
             </p>
           </div>
@@ -41,17 +41,17 @@ export default function AllProjects({ onBack }: AllProjectsProps) {
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: idx * 0.04 }}
-              className="group relative rounded-2xl overflow-hidden glass border-white/5 hover:border-primary/30 transition-all duration-500 flex flex-col justify-between"
+              className="group relative rounded-2xl overflow-hidden glass border-slate-200/90 dark:border-white/5 hover:border-primary/40 transition-all duration-500 flex flex-col justify-between shadow-sm dark:shadow-none"
             >
               <div>
-                <div className="aspect-video overflow-hidden bg-black/40 relative">
+                <div className="aspect-video overflow-hidden bg-slate-200 dark:bg-black/40 relative">
                   <img 
                     src={project.image} 
                     alt={project.title}
                     loading="lazy"
                     decoding="async"
                     referrerPolicy="no-referrer"
-                    className="w-full h-full object-cover grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" 
+                    className="w-full h-full object-cover grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" 
                   />
                 </div>
 
@@ -68,10 +68,10 @@ export default function AllProjects({ onBack }: AllProjectsProps) {
                   </div>
 
                   <div className="space-y-2">
-                    <h4 className="text-xl font-bold font-display group-hover:text-primary transition-colors">
+                    <h4 className="text-xl font-bold font-display text-slate-900 dark:text-white group-hover:text-primary transition-colors">
                       {project.title}
                     </h4>
-                    <p className="text-white/60 text-sm font-light leading-relaxed line-clamp-3">
+                    <p className="text-slate-600 dark:text-white/60 text-sm font-light leading-relaxed line-clamp-3">
                       {project.desc}
                     </p>
                   </div>
@@ -79,13 +79,13 @@ export default function AllProjects({ onBack }: AllProjectsProps) {
               </div>
 
               <div className="p-7 pt-0">
-                <div className="flex items-center gap-6 pt-4 border-t border-white/5">
+                <div className="flex items-center gap-6 pt-4 border-t border-slate-200/80 dark:border-white/5">
                   {project.github && (
                     <a 
                       href={project.github} 
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-sm font-medium text-white/50 hover:text-white transition-colors"
+                      className="flex items-center gap-2 text-sm font-medium text-slate-600 dark:text-white/50 hover:text-primary dark:hover:text-white transition-colors"
                     >
                       <Github size={16} />
                       Source
@@ -95,7 +95,7 @@ export default function AllProjects({ onBack }: AllProjectsProps) {
                     href={project.live} 
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-sm font-medium text-white/50 hover:text-white transition-colors ml-auto"
+                    className="flex items-center gap-2 text-sm font-medium text-slate-600 dark:text-white/50 hover:text-primary dark:hover:text-white transition-colors ml-auto"
                   >
                     <ExternalLink size={16} />
                     Live Demo
@@ -103,7 +103,7 @@ export default function AllProjects({ onBack }: AllProjectsProps) {
                 </div>
               </div>
 
-              <div className="absolute top-3 right-3 p-1.5 rounded-lg glass opacity-0 group-hover:opacity-100 transition-opacity">
+              <div className="absolute top-3 right-3 p-1.5 rounded-lg glass opacity-0 group-hover:opacity-100 transition-opacity border-slate-200 dark:border-white/10">
                 <Terminal size={14} className="text-primary" />
               </div>
             </motion.div>
