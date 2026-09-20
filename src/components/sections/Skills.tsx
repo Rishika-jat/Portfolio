@@ -1,17 +1,17 @@
 import { motion } from 'motion/react';
-import { Cpu, Database, Layout, Terminal, Code2 } from 'lucide-react';
+import { Database, Layout, Terminal, Code2, Sparkles, Wrench } from 'lucide-react';
 
 const skillCategories = [
   {
     title: 'Languages',
     icon: Code2,
-    skills: ['TypeScript', 'JavaScript', 'Java', 'SQL', 'HTML5', 'CSS3'],
+    skills: ['TypeScript', 'JavaScript', 'Java', 'SQL', 'HTML', 'CSS'],
     color: 'from-yellow-500 to-amber-500'
   },
   {
     title: 'Frontend',
     icon: Layout,
-    skills: ['React.js', 'Next.js', 'Redux', 'Tailwind CSS', 'Bootstrap', 'MUI'],
+    skills: ['React.js', 'Next.js', 'React Native', 'Redux', 'Tailwind CSS', 'Bootstrap', 'MUI'],
     color: 'from-blue-500 to-cyan-500'
   },
   {
@@ -21,15 +21,21 @@ const skillCategories = [
     color: 'from-green-500 to-emerald-500'
   },
   {
+    title: 'AI / ML',
+    icon: Sparkles,
+    skills: ['RAG', 'LangChain', 'LangGraph', 'Vector Databases', 'Prompt Engineering'],
+    color: 'from-fuchsia-500 to-purple-500'
+  },
+  {
     title: 'Databases',
     icon: Database,
-    skills: ['PostgreSQL', 'MongoDB', 'MySQL', 'Redis'],
+    skills: ['MySQL', 'MongoDB', 'PostgreSQL'],
     color: 'from-purple-500 to-pink-500'
   },
   {
-    title: 'AI & Engineering Tools',
-    icon: Cpu,
-    skills: ['Cursor', 'Claude', 'GitHub Copilot', 'Git', 'Docker', 'Postman', 'PgAdmin', 'CI/CD'],
+    title: 'Tools',
+    icon: Wrench,
+    skills: ['Cursor', 'Claude', 'GitHub Copilot', 'Git', 'GitHub', 'VS Code', 'PgAdmin', 'Docker', 'Postman'],
     color: 'from-orange-500 to-red-500'
   }
 ];
@@ -48,7 +54,7 @@ export default function Skills() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {skillCategories.map((category, idx) => (
             <motion.div
               key={category.title}

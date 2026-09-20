@@ -21,7 +21,7 @@ export default function About() {
             </div>
             
             <p className="text-slate-600 dark:text-white/60 leading-relaxed text-lg font-light">
-              Full-Stack Software Engineer with nearly 2 years of experience building scalable web platforms and no-code/low-code tooling, alongside freelance project work. Proven track record delivering MVP demos to enterprise clients, driving successful onboarding, and improving development speed through AI-assisted engineering (Cursor, Claude).
+              Full-Stack Software Engineer with nearly 2 years of experience building scalable web platforms and no-code/low-code tooling, alongside freelance project work. Proven track record delivering MVP demos to enterprise clients, driving successful onboarding, and improving development speed through AI-assisted engineering (Cursor, Claude). Skilled across React/Next.js, React Native, Node.js/NestJS, and Java Spring Boot, with hands-on experience building AI-powered features using RAG, LangChain, LangGraph, and vector databases, as well as UAT, CI/CD, and production reliability.
             </p>
 
             <div className="grid grid-cols-2 gap-6">
@@ -61,7 +61,7 @@ export default function About() {
                   <span className="text-xs uppercase tracking-widest text-slate-500 dark:text-white/40">Current Status</span>
                   <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
                 </div>
-                <p className="text-sm font-medium text-slate-800 dark:text-white">Software Engineer at Naikroop Solutions — leading UAT releases, optimizing multi-user scalability (500+ users), and crafting modern web platforms.</p>
+                <p className="text-sm font-medium text-slate-800 dark:text-white">Software Engineer at Naikroop Solutions — leading UAT releases, optimizing multi-user scalability for concurrent users, and crafting modern web platforms.</p>
               </div>
             </div>
             {/* Background elements */}

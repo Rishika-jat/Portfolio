@@ -88,7 +88,9 @@ export default function Hero() {
             <span>REACT</span>
             <span>NEXTJS</span>
             <span>TYPESCRIPT</span>
-            <span>AI</span>
+            <span>LANGCHAIN</span>
+            <span>RAG</span>
+            <span>SPRING BOOT</span>
             <span>DOCKER</span>
           </div>
         </motion.div>

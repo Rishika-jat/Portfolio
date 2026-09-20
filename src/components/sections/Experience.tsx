@@ -7,10 +7,10 @@ const experiences = [
     role: 'Software Engineer',
     period: 'Jul 2026 – Present',
     description: [
-      'Lead User Acceptance Testing (UAT) for production releases, identifying and resolving defects to cut post-release issues by 25%.',
-      'Improve multi-user functionality, increasing platform scalability and reliability to support 500+ concurrent users.',
+      'Lead User Acceptance Testing (UAT) for production releases, identifying and resolving defects to cut post-release issues.',
+      'Improve multi-user functionality, increasing platform scalability and reliability to support concurrent users.',
       'Apply UX best practices to simplify complex technical workflows, increasing adoption among non-technical users by 30%.',
-      'Write comprehensive unit tests, raising code coverage to 80% and reducing production regression bugs by 35%.'
+      'Write comprehensive unit tests, raising code coverage to 80% and reducing production regression bugs.'
     ]
   },
   {
@@ -21,7 +21,7 @@ const experiences = [
       'Built a Backend Flow Designer within NaikFlow that lets non-technical users create backend services via drag-and-drop, cutting backend development time by 40%.',
       'Presented 15+ MVP demos to enterprise clients, including AurionPro, helping drive successful onboarding and 90% client retention.',
       'Managed end-to-end client communication — gathering requirements, proposing technical solutions, and delivering — across 8+ concurrent projects.',
-      'Used Cursor and Claude with effective prompt-engineering techniques for code refactoring and logic generation, speeding up development by 35% while keeping code clean.',
+      'Used Cursor and Claude with effective prompt-engineering techniques for code refactoring and logic generation, speeding up development while keeping code clean.',
       'Contributed to a Java-based code generator that auto-translates visual workflows into backend services, reducing manual coding effort by 50%.'
     ]
   },
@@ -31,7 +31,7 @@ const experiences = [
     period: 'Feb 2025 – Jul 2025',
     description: [
       'Built a reusable React component framework with a drag-and-drop interface, enabling dynamic SPA rendering from JSON configurations and cutting UI development time by 30%.',
-      'Implemented a fully automated CI/CD pipeline using GitHub Actions and Cypress for end-to-end testing on Azure Cloud, reducing deployment time by 40% and catching 50+ defects pre-release.',
+      'Implemented a fully automated CI/CD pipeline using GitHub Actions and Cypress for end-to-end testing on Azure Cloud, reducing deployment time and catching defects pre-release.',
       'Researched and benchmarked leading No-Code/Low-Code platforms (Bubble, Retool) to inform NaikFlow\'s architecture and product roadmap.'
     ]
   },

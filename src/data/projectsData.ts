@@ -24,7 +24,7 @@ export const projects: Project[] = [
   {
     id: 'ai-recipe-maker',
     title: 'AI Recipe Recommendation System',
-    desc: 'An AI-powered web application that generates personalized recipe suggestions from user-provided ingredients, simplifying meal-planning decisions with curated YouTube cooking guides.',
+    desc: 'Built an AI-powered application that generates recipe suggestions from user-provided ingredients, simplifying meal-planning decisions, integrated with curated YouTube cooking guides to improve user engagement.',
     image: aiRecipeMakerImg,
     tags: ['ReactJS', 'AI Agent', 'TailwindCSS', 'YouTube API'],
     live: 'https://ai-recipe-maker-0tc2.onrender.com/',
@@ -34,7 +34,7 @@ export const projects: Project[] = [
   {
     id: 'crave-chef-ai',
     title: 'Crave — AI-Powered Food Delivery Platform',
-    desc: 'A full-stack food delivery application featuring an AI-powered meal planner, generating personalized recommendations, ingredient-customization, and streamlined ordering flows.',
+    desc: 'Built a full-stack food delivery application with an AI-powered meal planner, generating personalized recommendations for users with an ingredient-customization and ordering system.',
     image: craveChefImg,
     tags: ['ReactJS', 'AI Meal Planner', 'TailwindCSS', 'Redux', 'Full-Stack'],
     github: 'https://github.com/Rishika-jat/Food-Delivery',
@@ -44,8 +44,8 @@ export const projects: Project[] = [
   },
   {
     id: 'kutumbh-sakhi',
-    title: 'Kutumbh Sakhi — E-Commerce & Inventory Management',
-    desc: 'A full-stack e-commerce application with real-time inventory, product, cart, and order management, paired with an admin dashboard with automatic stock updates.',
+    title: 'E-Commerce Platform with Inventory Management',
+    desc: 'Built a full-stack e-commerce application with real-time inventory, product, cart, and order management, paired with an admin dashboard with automatic stock updates, eliminating overselling incidents.',
     image: kutumbhSakhiImg,
     tags: ['ReactJS', 'TailwindCSS', 'Context API', 'Inventory Admin'],
     live: 'https://kutumbsakhi.in/',
